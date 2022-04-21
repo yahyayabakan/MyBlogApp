@@ -1,5 +1,55 @@
 {% extends "base.html" %} {% load static %} {% block css_files %} {% endblock %} {% block content %} {% block title %} Homepage {% endblock %}
-<h1>Homepage</h1>
-<img src="{% static 'blog/img/django.png'%} " alt="django picture" width="100"> {% endblock %} {% block js_files %}
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-3">
+            {% include 'partials/_categories.html' %}
+        </div>
+        <div class="col-9">
+            <h1>Homepage</h1>
+            <hr> {% include 'blog/partials/_blog.html' %} {% include 'blog/partials/_blog.html' %} {% include 'blog/partials/_blog.html' %} {% include 'blog/partials/_blog.html' %}
+            <!--<div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="{% static 'img/python.jpeg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Python Tutorial</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="{% static 'img/react.jpeg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">React Tutorial</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" src="{% static 'img/django.jpeg' %}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Django Tutorial</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+
+    </div>
+</div>
+{% endblock %} {% block js_files %}
 <script src="{% static 'blog/js/script.js' %}"></script>
 {% endblock %}
